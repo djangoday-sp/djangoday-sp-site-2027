@@ -1,11 +1,11 @@
 baseURL = 'https://saopaulo.djangoday.com.br/'
 locale = 'pt-br'
 title = 'Django Day São Paulo'
-
+disableKinds = ['taxonomy', 'term', 'section', 'rss']
 theme = "LucentLink-Hugo"
 
 [params]
-  description     = "A clean, customizable, and responsive Linktree-style landing page built using HTML, Tailwind CSS, and Font Awesome."
+  description = "Django Day São Paulo 2027"
 
 [outputs]
   home = ["HTML"]
