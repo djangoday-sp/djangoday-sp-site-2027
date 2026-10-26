@@ -2,8 +2,8 @@
 title: "LucentLink"
 # Profile settings
 profileImage: "images/django.png"
-name: "Django Day São Paulo"
-description: "Em breve mais informações."
+name: "Django Day São Paulo 2027"
+description: "O primeiro evento dedicado ao Django na capital paulista."
 socials:
   - url: "https://www.instagram.com/djangoday.sp/"
     icon: "fab fa-instagram"
@@ -20,7 +20,7 @@ links:
     icon: "fab fa-linkedin"
     title: "Siga-nos no Linkedin"
     description: ""    
-  - href: "mailto:contato@saopaulo.djangoday.com.br"
+  - href: "mailto:saopaulo@djangoday.com.br"
     icon: "fas fa-envelope"
     title: "Entre em contato"
     description: ""
