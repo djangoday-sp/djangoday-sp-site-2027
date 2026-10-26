@@ -9,6 +9,8 @@ socials:
     icon: "fab fa-instagram"
   - url: "https://www.linkedin.com/company/djangoday-sp"
     icon: "fab fa-linkedin"
+  - url: "https://bsky.app/profile/djangoday.com.br"
+    icon: "fab fa-bluskey"
 
 # Link cards
 links:
