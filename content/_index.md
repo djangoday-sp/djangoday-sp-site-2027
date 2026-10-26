@@ -9,8 +9,10 @@ socials:
     icon: "fab fa-instagram"
   - url: "https://www.linkedin.com/company/djangoday-sp"
     icon: "fab fa-linkedin"
+  - url: "https://mastodon.social/@djangoday_sp"
+    icon: "fab fa-mastodon"
   - url: "https://bsky.app/profile/djangoday.com.br"
-    icon: "fab fa-bluskey"
+    icon: "fab fa-bluesky"
 
 # Link cards
 links:
@@ -21,6 +23,10 @@ links:
   - href: "https://www.linkedin.com/company/djangoday-sp"
     icon: "fab fa-linkedin"
     title: "Siga-nos no Linkedin"
+    description: ""
+  - href: "https://mastodon.social/@djangoday_sp"
+    icon: "fab fa-mastodon"
+    title: "Siga-nos no Fediverso"
     description: ""
   - href: "https://bsky.app/profile/djangoday.com.br"
     icon: "fab fa-bluesky"
