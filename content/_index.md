@@ -16,6 +16,10 @@ socials:
 
 # Link cards
 links:
+  - href: "https://cfp.lhc.net.br/meetup-django-sp/"
+    icon: "fas fa-comments"
+    title: "26 / 11 / 2026 - Meetup de aniversário GruPy-SP e Django Day SP 2027"
+    description: "Clique aqui e envie uma proposta de palestra!"
   - href: "https://www.instagram.com/djangoday.sp/"
     icon: "fab fa-instagram"
     title: "Siga-nos no Instagram"
