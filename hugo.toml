@@ -1,7 +1,7 @@
 baseURL = 'https://sp.djangoday.com.br/'
 locale = 'pt-br'
 title = 'Django Day São Paulo'
-disableKinds = ['taxonomy', 'term', 'section', 'rss']
+disableKinds = ['taxonomy', 'term', 'rss']
 theme = "LucentLink-Hugo"
 
 [params]

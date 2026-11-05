@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta grade Django Day SP 2027</title>
+<style>
+:root { --bg:#fbfaf7; --fg:#1f2421; --muted:#5d6661; --line:#dcdcd4; --head:#eef2ec; --accent:#0c4b33; --zebra:#f4f5f0; }
+@media (prefers-color-scheme: dark) { :root { --bg:#141816; --fg:#e6e9e4; --muted:#a3aca6; --line:#2f3732; --head:#1e2722; --accent:#7fcfa6; --zebra:#181d1a; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width:1100px; margin:0 auto; padding:40px 20px 80px; }
+h1 { font-size:2rem; color:var(--accent); margin:0 0 .5rem; }
+h2 { font-size:1.4rem; color:var(--accent); margin:2.5rem 0 .75rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+h3 { font-size:1.1rem; margin:1.75rem 0 .5rem; }
+p, li { max-width:75ch; }
+a { color:var(--accent); }
+.table-wrap { overflow-x:auto; margin:1rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.92rem; }
+th, td { border:1px solid var(--line); padding:.45rem .65rem; text-align:left; vertical-align:top; }
+th { background:var(--head); font-weight:600; }
+tbody tr:nth-child(even) { background:var(--zebra); }
+td:first-child { white-space:nowrap; font-variant-numeric:tabular-nums; }
+</style>
+</head>
+<body><main>
+<h1>Proposta grade Django Day SP 2027</h1>
+<p>Duas versões com os mesmos princípios: a versão 1 tem 8 palestras e a versão 2 tem 7.</p>
+<h2>Versão 1: 8 palestras</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Horário</th>
+<th>Trilha principal</th>
+<th>Open space</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:30 – 09:15</td>
+<td>🎫 Credenciamento</td>
+<td>Livre</td>
+<td></td>
+</tr>
+<tr>
+<td>09:15 – 09:30</td>
+<td>Abertura</td>
+<td>— fechado —</td>
+<td>Explicar o open space e o quadro de tópicos</td>
+</tr>
+<tr>
+<td>09:30 – 10:20</td>
+<td><strong>Keynote</strong></td>
+<td>— fechado —</td>
+<td>45 min de fala + 5 de perguntas</td>
+</tr>
+<tr>
+<td>10:20 – 10:45</td>
+<td>☕ Café e circulação</td>
+<td>Livre</td>
+<td>Temas no quadro do open space e troca de palestrante</td>
+</tr>
+<tr>
+<td>10:45 – 11:15</td>
+<td>Palestra 1</td>
+<td>Sessão 1</td>
+<td>25 min de fala + 5 de troca de palestrante</td>
+</tr>
+<tr>
+<td>11:15 – 11:45</td>
+<td>Palestra 2</td>
+<td>Sessão 2</td>
+<td></td>
+</tr>
+<tr>
+<td>11:45 – 12:15</td>
+<td>Palestra 3</td>
+<td>Sessão 3</td>
+<td></td>
+</tr>
+<tr>
+<td>12:15 – 12:45</td>
+<td>Palestra 4</td>
+<td>Sessão 4</td>
+<td></td>
+</tr>
+<tr>
+<td>12:45 – 14:15</td>
+<td>🍽️ Almoço</td>
+<td>Livre</td>
+<td>1h30, com tempo para sair do prédio</td>
+</tr>
+<tr>
+<td>14:15 – 14:45</td>
+<td>Palestra 5</td>
+<td>Sessão 5</td>
+<td>Tema leve ou prático; pode começar com menos público</td>
+</tr>
+<tr>
+<td>14:45 – 15:15</td>
+<td>Palestra 6</td>
+<td>Sessão 6</td>
+<td></td>
+</tr>
+<tr>
+<td>15:15 – 15:45</td>
+<td>Palestra 7</td>
+<td>Sessão 7</td>
+<td></td>
+</tr>
+<tr>
+<td>15:45 – 16:15</td>
+<td>☕ Café</td>
+<td>Livre</td>
+<td>Fechamento das inscrições para lightning talks</td>
+</tr>
+<tr>
+<td>16:15 – 16:45</td>
+<td>Palestra 8</td>
+<td>Sessão 8</td>
+<td></td>
+</tr>
+<tr>
+<td>16:45 – 17:15</td>
+<td>⚡ Lightning talks</td>
+<td>— fechado —</td>
+<td>Cortar falas se o dia estiver atrasado</td>
+</tr>
+<tr>
+<td>17:15 – 17:30</td>
+<td>Encerramento</td>
+<td>— fechado —</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resumo:</strong> credenciamento, 1 keynote de 45 minutos de fala com 5 de perguntas, 8 palestras de 30 minutos, lightning talks, 8 sessões de open space, almoço de 1h30, um café de 25 minutos com circulação e um café de 30 minutos, das 8h30 às 17h30.</p>
+<h3>Intervalos entre as refeições (versão 1)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>De</th>
+<th>Para</th>
+<th>Intervalo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credenciamento (08:30)</td>
+<td>Café da manhã (10:20)</td>
+<td>1h50</td>
+</tr>
+<tr>
+<td>Café da manhã (10:45)</td>
+<td>Almoço (12:45)</td>
+<td>2h</td>
+</tr>
+<tr>
+<td>Almoço (14:15)</td>
+<td>Café da tarde (15:45)</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Café da tarde (16:15)</td>
+<td>Fim do evento (17:30)</td>
+<td>1h15</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Versão 2: 7 palestras</h2>
+<p>A palestra 4 da versão 1 vai para a tarde, e o almoço começa 30 minutos mais cedo. Assim a manhã fica com 3 palestras e a tarde com 4, e nenhum intervalo entre refeições passa de 1h50.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Horário</th>
+<th>Trilha principal</th>
+<th>Open space</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:30 – 09:15</td>
+<td>🎫 Credenciamento</td>
+<td>Livre</td>
+<td></td>
+</tr>
+<tr>
+<td>09:15 – 09:30</td>
+<td>Abertura</td>
+<td>— fechado —</td>
+<td>Explicar o open space e o quadro de tópicos</td>
+</tr>
+<tr>
+<td>09:30 – 10:20</td>
+<td><strong>Keynote</strong></td>
+<td>— fechado —</td>
+<td>45 min de fala + 5 de perguntas</td>
+</tr>
+<tr>
+<td>10:20 – 10:45</td>
+<td>☕ Café e circulação</td>
+<td>Livre</td>
+<td>Temas no quadro do open space e troca de palestrante</td>
+</tr>
+<tr>
+<td>10:45 – 11:15</td>
+<td>Palestra 1</td>
+<td>Sessão 1</td>
+<td>25 min de fala + 5 de troca de palestrante</td>
+</tr>
+<tr>
+<td>11:15 – 11:45</td>
+<td>Palestra 2</td>
+<td>Sessão 2</td>
+<td></td>
+</tr>
+<tr>
+<td>11:45 – 12:15</td>
+<td>Palestra 3</td>
+<td>Sessão 3</td>
+<td></td>
+</tr>
+<tr>
+<td>12:15 – 13:45</td>
+<td>🍽️ Almoço</td>
+<td>Livre</td>
+<td>1h30, com tempo para sair do prédio</td>
+</tr>
+<tr>
+<td>13:45 – 14:15</td>
+<td>Palestra 4</td>
+<td>Sessão 4</td>
+<td>Tema leve ou prático; pode começar com menos público</td>
+</tr>
+<tr>
+<td>14:15 – 14:45</td>
+<td>Palestra 5</td>
+<td>Sessão 5</td>
+<td></td>
+</tr>
+<tr>
+<td>14:45 – 15:15</td>
+<td>Palestra 6</td>
+<td>Sessão 6</td>
+<td></td>
+</tr>
+<tr>
+<td>15:15 – 15:45</td>
+<td>☕ Café</td>
+<td>Livre</td>
+<td>Fechamento das inscrições para lightning talks</td>
+</tr>
+<tr>
+<td>15:45 – 16:15</td>
+<td>Palestra 7</td>
+<td>Sessão 7</td>
+<td></td>
+</tr>
+<tr>
+<td>16:15 – 16:45</td>
+<td>⚡ Lightning talks</td>
+<td>— fechado —</td>
+<td>Cortar falas se o dia estiver atrasado</td>
+</tr>
+<tr>
+<td>16:45 – 17:00</td>
+<td>Encerramento</td>
+<td>— fechado —</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Resumo:</strong> credenciamento, 1 keynote de 45 minutos de fala com 5 de perguntas, 7 palestras de 30 minutos, lightning talks, 7 sessões de open space, almoço de 1h30, um café de 25 minutos com circulação e um café de 30 minutos, das 8h30 às 17h.</p>
+<h3>Intervalos entre as refeições (versão 2)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>De</th>
+<th>Para</th>
+<th>Intervalo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credenciamento (08:30)</td>
+<td>Café da manhã (10:20)</td>
+<td>1h50</td>
+</tr>
+<tr>
+<td>Café da manhã (10:45)</td>
+<td>Almoço (12:15)</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Almoço (13:45)</td>
+<td>Café da tarde (15:15)</td>
+<td>1h30</td>
+</tr>
+<tr>
+<td>Café da tarde (15:45)</td>
+<td>Fim do evento (17:00)</td>
+<td>1h15</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Formatos (as duas versões)</h2>
+<ul>
+<li><strong>Keynote:</strong> 45 minutos de fala e 5 de perguntas.</li>
+<li><strong>Palestras:</strong> 25 minutos de fala e 5 de troca de palestrante. Sem perguntas no palco; as perguntas ficam para conversas com o palestrante no café ou no open space.</li>
+<li><strong>Lightning talks:</strong> 5 a 6 falas de 5 minutos, no fim do dia. Se a programação atrasar, cortam-se falas para o encerramento sair na hora.</li>
+<li><strong>Almoço:</strong> 1h30, porque as pessoas precisam sair do prédio para comer. Um atraso na volta afeta no máximo o público do início da primeira palestra da tarde.</li>
+<li><strong>Open space:</strong> trilha paralela oficial, com sessões de 30 minutos sincronizadas com as palestras. É um espaço livre: conversar, programar junto, discutir um tema do quadro ou descansar. Fica fechado durante a abertura, o keynote, as lightning talks e o encerramento.</li>
+</ul>
+<h2>Comparação com outros eventos de Django</h2>
+<p>Programações conferidas nas páginas oficiais e no pretalx em 05/11/2026. Os eventos de um dia só são os mais parecidos com este.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th></th>
+<th>Esta grade</th>
+<th>Django Day Copenhagen 2026</th>
+<th>DjangoCongress JP 2025</th>
+<th>DjangoCon Europe 2025 (dia 1)</th>
+<th>DjangoCon US 2025 (8/set)</th>
+<th>Python Brasil 2025</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duração do evento</td>
+<td>1 dia</td>
+<td>1 dia</td>
+<td>1 dia (online)</td>
+<td>3 dias de palestras</td>
+<td>3 dias de palestras</td>
+<td>vários dias</td>
+</tr>
+<tr>
+<td>Trilhas</td>
+<td>1 + open space</td>
+<td>1</td>
+<td>2</td>
+<td>1 de palestras + 1 sala de workshops</td>
+<td>2</td>
+<td>não verificado</td>
+</tr>
+<tr>
+<td>Início</td>
+<td>08:30 credenciamento, 09:15 abertura</td>
+<td>09:00 check-in com café da manhã, 09:30 abertura</td>
+<td>10:00 abertura</td>
+<td>09:30 abertura</td>
+<td>primeira palestra às 10:50¹</td>
+<td>não verificado</td>
+</tr>
+<tr>
+<td>Keynote</td>
+<td>50 min (45 de fala + 5 de perguntas)</td>
+<td>não tem</td>
+<td>não tem</td>
+<td>55 min</td>
+<td>não aparece na exportação¹</td>
+<td>não mencionado na chamada</td>
+</tr>
+<tr>
+<td>Palestras</td>
+<td>8 (versão 1) ou 7 (versão 2), de 30 min</td>
+<td>9 em slots de 35 min²</td>
+<td>14 de 45 min, 7 por sala</td>
+<td>8 de 30 min</td>
+<td>14 em 2 salas, de 45 e de 25 min</td>
+<td>45 min</td>
+</tr>
+<tr>
+<td>Troca entre palestras</td>
+<td>5 min, dentro do slot</td>
+<td>dentro do slot²</td>
+<td>10 min</td>
+<td>5 min, fora do slot</td>
+<td>5 min, fora do slot</td>
+<td>não verificado</td>
+</tr>
+<tr>
+<td>Perguntas</td>
+<td>só no keynote</td>
+<td>não mencionadas</td>
+<td>não verificado</td>
+<td>não verificado</td>
+<td>não verificado</td>
+<td>dentro dos 45 min</td>
+</tr>
+<tr>
+<td>Cafés e pausas</td>
+<td>25 e 30 min</td>
+<td>pausas de 10 min para água e 75 min de bolo à tarde</td>
+<td>nenhuma rotulada</td>
+<td>35 e 35 min</td>
+<td>35 min à tarde</td>
+<td>não verificado</td>
+</tr>
+<tr>
+<td>Almoço</td>
+<td>1h30</td>
+<td>55 min</td>
+<td>1h</td>
+<td>1h</td>
+<td>~1h45</td>
+<td>não verificado</td>
+</tr>
+<tr>
+<td>Lightning talks</td>
+<td>30 min, no fim do dia</td>
+<td>~30 min, no fim do dia</td>
+<td>não tem</td>
+<td>45 min, no fim do dia</td>
+<td>não aparecem</td>
+<td>não mencionadas na chamada</td>
+</tr>
+<tr>
+<td>Fim</td>
+<td>17:30 (versão 1) ou 17:00 (versão 2)</td>
+<td>18:00 encerramento, festa às 19:30</td>
+<td>17:45</td>
+<td>18:20</td>
+<td>17:25</td>
+<td>não verificado</td>
+</tr>
+</tbody>
+</table></div>
+<p>¹ A manhã da DjangoCon US antes das 10:50 não aparece na exportação da programação.
+² A Django Day Copenhagen publica só os horários de início; os 35 min são o espaço entre uma palestra e a seguinte. A chamada de 2023 pedia palestras de 25 min, o que deixaria 10 min por slot para troca e talvez perguntas; a de 2026 não foi verificada.</p>
+<p>Nenhum desses eventos diz, na chamada ou na programação, se o tempo da palestra inclui perguntas. A exceção é a Python Brasil, cujos 45 min já incluem as perguntas.</p>
+<p><strong>O que a comparação mostra:</strong></p>
+<ul>
+<li><strong>Os eventos de trilha única usam slots de 30 a 35 min.</strong> É o caso da Django Day Copenhagen e da DjangoCon Europe. Os de 45 min (DjangoCongress JP, Python Brasil e parte da DjangoCon US) têm duas trilhas ou incluem perguntas no tempo.</li>
+<li><strong>Os 25 min de fala desta grade estão dentro do padrão.</strong> A Django Day Copenhagen (chamada de 2023) e a DjangoCon US também pedem palestras de 25 min. A diferença é que elas deixam 5 a 10 min fora da fala; aqui os 5 min de troca estão dentro do slot de 30.</li>
+<li><strong>O keynote não é universal.</strong> A Django Day Copenhagen e a DjangoCongress JP abrem direto com palestras; a DjangoCon Europe tem um keynote de 55 min.</li>
+<li><strong>O almoço de 1h30 é longo para o padrão.</strong> Os eventos de um dia ficam em 55 min a 1h. Aqui o tempo extra é necessário porque o almoço é fora do prédio.</li>
+<li><strong>As lightning talks fecham o dia, como na Django Day Copenhagen e na DjangoCon Europe.</strong> Elas também servem de margem para o encerramento sair no horário.</li>
+<li><strong>A Django Day Copenhagen pausa mais vezes e por menos tempo:</strong> 10 min para água e um intervalo longo à tarde.</li>
+<li><strong>O open space não tem equivalente.</strong> O mais próximo é a sala de workshops da DjangoCon Europe.</li>
+</ul>
+<p>Fontes:
+- <a target="_blank" rel="noopener" href="https://2026.djangoday.dk/">Django Day Copenhagen 2026</a>
+- <a target="_blank" rel="noopener" href="https://djangocongress.jp/">DjangoCongress JP 2025</a>
+- <a target="_blank" rel="noopener" href="https://pretalx.evolutio.pt/djangocon-europe-2025/schedule/">DjangoCon Europe 2025 – programação (pretalx)</a>
+- <a target="_blank" rel="noopener" href="https://pretalx.com/djangocon-us-2025/schedule/">DjangoCon US 2025 – programação (pretalx)</a>
+- <a target="_blank" rel="noopener" href="https://pretalx.com/djangocon-us-2025/cfp">DjangoCon US 2025 – chamada de propostas</a>
+- <a target="_blank" rel="noopener" href="https://talks.python.org.br/pythonbrasil-2025/cfp">Python Brasil 2025 – chamada de atividades</a></p>
+</main></body>
+</html>
