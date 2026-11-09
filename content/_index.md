@@ -1,7 +1,7 @@
 ---
 title: "LucentLink"
 # Profile settings
-profileImage: "images/django.png"
+profileImage: "images/django-day-sp.png"
 name: "Django Day São Paulo 2027"
 description: "O primeiro evento dedicado ao Django na capital paulista."
 socials:
