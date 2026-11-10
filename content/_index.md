@@ -18,11 +18,11 @@ socials:
 links:
   - href: "https://pretix.lhc.net.br/djangoday.sp/meetup/"
     icon: "fas fa-ticket"
-    title: "🎟️ Inscrições: Meetup Django SP (26/11)"
+    title: "🎟️ Inscrições: Meetup Django SP (25/11)"
     description: "Clique aqui e faça sua inscrição gratuita!"
   - href: "https://cfp.lhc.net.br/meetup-django-sp/"
     icon: "fas fa-comments"
-    title: "🎤 Envie sua palestra: Meetup Django SP (26/11)"
+    title: "🎤 Envie sua palestra: Meetup Django SP (25/11)"
     description: "Clique aqui e envie uma proposta de palestra!"
   - href: "https://www.instagram.com/djangoday.sp/"
     icon: "fab fa-instagram"
