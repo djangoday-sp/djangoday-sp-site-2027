@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Django Day São Paulo - 2027</title>
+<style>
+  @page { size: A4; margin: 18mm 18mm 20mm; }
+
+  :root {
+    --verde: #092E20;
+    --verde-claro: #44B78B;
+    --verde-bg: #EEF7F2;
+    --texto: #1F2A25;
+    --suave: #5B6B63;
+    --linha: #D5E3DB;
+    --ph: #FFF3C4;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #E9ECEA;
+    color: var(--texto);
+    font: 10.5pt/1.55 "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  .pagina {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12mm auto;
+    padding: 18mm;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+  @media print {
+    body { background: #fff; font-size: 9.6pt; line-height: 1.45; }
+    h2 { margin: 14px 0 6px; }
+    .numeros { margin: 10px 0 4px; }
+    .nivel { padding: 10px; }
+    .nivel .valor { margin: 4px 0 6px; }
+    table.comp { margin-top: 8px; }
+    table.comp th, table.comp td { padding: 4px 6px; }
+    .pagina { margin: 0; padding: 0; box-shadow: none; width: auto; min-height: auto; page-break-after: always; }
+    .pagina:last-child { page-break-after: auto; }
+    .ph { background: none !important; outline: 1px dashed #C9A400; }
+  }
+
+  h1, h2, h3 { color: var(--verde); line-height: 1.2; }
+  h1 { font-size: 22pt; white-space: nowrap; margin: 0; letter-spacing: -.5px; }
+  h2 { font-size: 13pt; margin: 22px 0 8px; padding-bottom: 4px; border-bottom: 2px solid var(--verde-claro); }
+  h3 { font-size: 11pt; margin: 0 0 4px; }
+  p { margin: 0 0 10px; }
+  ul { margin: 0 0 10px; padding-left: 18px; }
+  li { margin-bottom: 3px; }
+  a { color: var(--verde); }
+
+  /* Placeholder para preencher */
+  .ph { background: var(--ph); padding: 0 3px; border-radius: 2px; }
+
+  /* Cabeçalho */
+  .topo {
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 20px;
+    padding-bottom: 14px; border-bottom: 4px solid var(--verde); margin-bottom: 18px;
+  }
+  .topo .marca { display: flex; align-items: center; gap: 14px; }
+  .topo .marca img { width: 64px; height: 64px; border-radius: 10px; }
+  .redes { list-style: none; padding: 0; margin: 6px 0 0; font-size: 9.5pt; }
+  .redes li { margin-bottom: 2px; }
+  .redes b { display: inline-block; width: 72px; color: var(--suave); font-weight: 600; }
+  .topo .sub { color: var(--verde-claro); font-weight: 600; font-size: 11pt; margin-top: 4px; }
+  .topo .meta { text-align: right; white-space: nowrap; font-size: 9.5pt; color: var(--suave); }
+  .topo .meta strong { color: var(--verde); display: block; font-size: 10.5pt; }
+
+  /* Números */
+  .numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0 6px; }
+  .numeros div { background: var(--verde-bg); border-radius: 6px; padding: 10px 8px; text-align: center; }
+  .numeros b { display: block; font-size: 18pt; color: var(--verde); line-height: 1.1; }
+  .numeros span { font-size: 8.5pt; color: var(--suave); }
+
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+  /* Níveis */
+  .niveis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+  .nivel { border: 1px solid var(--linha); border-radius: 8px; padding: 14px 12px; display: flex; flex-direction: column; }
+  .nivel.destaque { border: 2px solid var(--verde); }
+  .nivel .nome { font-weight: 700; color: var(--verde); font-size: 12pt; }
+  .nivel .cotas { font-size: 8.5pt; color: var(--suave); text-transform: uppercase; letter-spacing: .4px; }
+  .nivel .valor { font-size: 16pt; font-weight: 700; margin: 8px 0 10px; color: var(--texto); }
+  .nivel ul { font-size: 9.5pt; padding-left: 16px; margin: 0; }
+
+  table.comp { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin-top: 14px; }
+  table.comp th, table.comp td { border-bottom: 1px solid var(--linha); padding: 6px 6px; text-align: center; }
+  table.comp th:first-child, table.comp td:first-child { text-align: left; }
+  table.comp thead th { color: var(--verde); font-weight: 700; border-bottom: 2px solid var(--verde); }
+
+  .nota { font-size: 9pt; color: var(--suave); }
+  .caixa { background: var(--verde-bg); border-left: 4px solid var(--verde-claro); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 12px 0; }
+
+  .org { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .org div { border-top: 3px solid var(--verde-claro); padding-top: 8px; font-size: 9.5pt; }
+  .comunidades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 9pt; color: var(--suave); }
+  .comunidades b { display: block; color: var(--verde); font-size: 10pt; margin-bottom: 2px; }
+  .logo-slot { height: 52px; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 6px; }
+  .logo-slot img { max-height: 46px; max-width: 80%; }
+  .org b { color: var(--verde); font-size: 10.5pt; display: block; }
+
+  .contato { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; background: var(--verde-bg); border-radius: 8px; padding: 14px 16px; }
+  .contato p { margin: 0; }
+  .contato .redes { margin: 0; }
+  .rodape { margin-top: 24px; padding-top: 10px; border-top: 1px solid var(--linha); font-size: 8.5pt; color: var(--suave); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<!-- ============ PÁGINA 1 ============ -->
+<section class="pagina">
+  <header class="topo">
+    <div class="marca">
+      <img src="/images/django-day-sp.png" alt="Logo Django Day São Paulo">
+      <div>
+        <h1>Django Day São Paulo</h1>
+        <div class="sub">Primeiro evento dedicado ao Django no Brasil</div>
+      </div>
+    </div>
+    <div class="meta">
+      <strong>10 de abril de 2027 (sábado)</strong>
+      São Paulo - SP<br>
+      <a href="https://sp.djangoday.com.br">https://sp.djangoday.com.br</a><br>
+      <strong style="color:var(--verde)">Plano de Apoio</strong>
+    </div>
+  </header>
+
+  <p>
+    O <strong>Django Day São Paulo</strong> é o primeiro evento no Brasil dedicado exclusivamente
+    ao Django, o framework web Python usado por empresas de todos os tamanhos. Em um único dia,
+    reúne desenvolvedores, empresas e a comunidade em torno de conteúdo técnico e de conversas
+    que geram conexões reais.
+  </p>
+  <p>
+    O formato se inspira no <a href="https://2026.djangoday.dk/about/">Django Day Copenhagen</a>
+    e em outras conferências Django ao redor do mundo, como a <a href="https://djangocon.us/">DjangoCon US</a>, 
+    a <a href="https://djangocon.eu/">DjangoCon Europe</a> e a <a href="https://djangocon.africa/">DjangoCon Africa</a>.
+    São eventos organizados pela comunidade, com programação técnica e tempo para integração, e o 
+    Brasil ainda não tinha um.
+  </p>
+
+  <div class="numeros">
+    <div><b>1º</b><span>evento Django<br>do Brasil</span></div>
+    <div><b>~120</b><span>participantes<br>ao longo do dia</span></div>
+    <div><b>1</b><span>trilha principal<br>+ trilha open space</span></div>
+    <div><b>1 dia</b><span>palestras e<br>lightning talks</span></div>
+  </div>
+
+  <h2>Por que São Paulo</h2>
+  <p>
+    São Paulo é a maior cidade do país, concentra grandes empresas de tecnologia e tem uma das
+    comunidades Python mais ativas do Brasil. Em 2025 a cidade sediou a 
+    <strong><a href="https://2025.pythonbrasil.org.br/">Python Brasil</a></strong>,
+    o maior evento Python do país, mostrando a força da comunidade local e a demanda por
+    eventos técnicos focados.
+  </p>
+
+  <h2>Formato: pequeno e focado</h2>
+  <div class="duas">
+    <div>
+      <h3>Trilha única principal</h3>
+      <p>
+        Todos assistem às mesmas palestras e saem com as mesmas referências para conversar.
+        Palestras de vários níveis de conhecimento e temas, além de uma pessoa keynote, 
+        referência na área e no uso de Django no Brasil.
+      </p>
+    </div>
+    <div>
+      <h3>Trilha open space</h3>
+      <p>
+        Nenhuma palestra interessa a todos. Por isso, em paralelo à trilha principal, há um
+        <em>open space</em> sem programação definida: os temas são propostos pelos participantes
+        no próprio dia nos mesmos horários das palestras. Quem se interessa pelo mesmo
+        assunto se encontra, e pode discutir na hora.
+      </p>
+    </div>
+  </div>
+
+  <h3>Programação prevista</h3>
+  <ul>
+    <li><strong>Palestras</strong> propostas pela comunidade em chamada aberta, sem apelo comercial, do nível introdutório ao avançado</li>
+    <li><strong>Lightning talks</strong> de 5 minutos, inscritas pelos participantes no dia do evento</li>
+    <li><strong>Open space</strong> durante todo o dia</li>
+  </ul>
+
+  <h2>Público</h2>
+  <p>
+    Cerca de <strong>120 pessoas</strong> com diferentes níveis de experiência em Python e Django, de iniciantes
+    a profissionais experientes incluindo pessoas desenvolvedoras, líderes técnicos, estudantes
+    e interessadas em desenvolvimento web com Python.
+  </p>
+</section>
+
+<!-- ============ PÁGINA 2 ============ -->
+<section class="pagina">
+  <h2 style="margin-top:0">Por que patrocinar</h2>
+  <ul>
+    <li><strong>Atenção do público inteiro:</strong> com trilha única, sua marca não divide o público entre salas.</li>
+    <li><strong>Contratação:</strong> contato direto com desenvolvedores Python e Django de São Paulo e região.</li>
+    <li><strong>Posicionamento:</strong> associar a marca ao primeiro evento Django do país e à comunidade que o organiza.</li>
+    <li><strong>Legado:</strong> as palestras serão gravadas e publicadas<sup>*</sup>, e a marca segue visível depois do evento.</li>
+  </ul>
+
+  <h2>Cotas de patrocínio</h2>
+  <p>Mantivemos poucas cotas e benefícios simples, compatíveis com um evento pequeno e de trilha única. O patrocínio não inclui espaço na programação: as palestras são escolhidas pela comunidade e não têm apelo comercial.</p>
+
+  <div class="niveis">
+    <div class="nivel destaque">
+      <div class="nome">Ouro</div>
+      <div class="cotas">[2 cotas]</div>
+      <div class="valor">R$ 7.000</div>
+      <ul>
+        <li>Logo em destaque no site, telão e vídeos<sup>*</sup></li>
+        <li>Espaço para mesa/estande no evento</li>
+        <li>Material ou brinde no kit do participante</li>
+        <li>4 ingressos</li>
+      </ul>
+    </div>
+    <div class="nivel">
+      <div class="nome">Prata</div>
+      <div class="cotas">[4 cotas]</div>
+      <div class="valor">R$ 3.000</div>
+      <ul>
+        <li>Logo no site, telão e vídeos<sup>*</sup></li>
+        <li>Material ou brinde no kit do participante</li>
+        <li>Agradecimento na abertura</li>
+        <li>2 ingressos</li>
+      </ul>
+    </div>
+    <div class="nivel">
+      <div class="nome">Bronze</div>
+      <div class="cotas">[cotas ilimitadas]</div>
+      <div class="valor">R$ 1.500</div>
+      <ul>
+        <li>Logo no site</li>
+        <li>Agradecimento na abertura</li>
+        <li>1 ingresso</li>
+      </ul>
+    </div>
+  </div>
+
+  <table class="comp">
+    <thead>
+      <tr><th>Benefício</th><th>Ouro</th><th>Prata</th><th>Bronze</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Logo no site</td><td>destaque</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Logo no telão e nos vídeos publicados<sup>*</sup></td><td>destaque</td><td>✓</td><td>—</td></tr>
+      <tr><td>Agradecimento na abertura</td><td>✓</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Material ou brinde no kit</td><td>✓</td><td>✓</td><td>—</td></tr>
+      <tr><td>Mesa/estande no evento</td><td>✓</td><td>—</td><td>—</td></tr>
+      <tr><td>Ingressos incluídos </td><td>4</td><td>2</td><td>1</td></tr>
+    </tbody>
+  </table>
+  <p class="nota" style="margin-top:6px">* A gravação e a publicação das palestras dependem de o evento arrecadar recursos suficientes para isso.</p>
+
+  <div class="caixa">
+    <strong>Apoio em produtos ou serviços.</strong> Também aceitamos patrocínio na forma de
+    espaço para o evento, alimentação, camisetas ou gravação. Nesses casos, enquadramos o apoio
+    na cota de valor equivalente.
+  </div>
+
+  <h2>Código de conduta</h2>
+  <p>
+    O Django Day São Paulo segue um código de conduta baseado no
+    <a href="https://apyb.python.org.br/pythonbrasil/cdc/">Código de Conduta da Python Brasil</a>,
+    mantido pela APyB. Ele vale para todas as pessoas presentes, incluindo participantes,
+    palestrantes, organização e patrocinadores, e também para os materiais e ações de
+    divulgação dos patrocinadores no evento.
+  </p>
+
+</section>
+
+<!-- ============ PÁGINA 3 ============ -->
+<section class="pagina">
+  <h2 style="margin-top:0">Para onde vai o investimento</h2>
+  <div class="duas">
+    <ul>
+      <li>Locação do espaço</li>
+      <li>Alimentação (coffee break)</li>
+      <li>Acessibilidade</li>
+      <li>Camisetas e kit do participante</li>
+    </ul>
+    <ul>
+      <li>Gravação, edição e publicação das palestras</li>
+      <li>Auxílio de para palestrantes e participantes</li>
+      <li>Divulgação do evento</li>
+    </ul>
+  </div>
+  <p class="nota">
+    O <strong>Django Day São Paulo</strong> é um evento sem fins lucrativos, organizado por voluntários.
+    Todo o valor arrecadado é usado no próprio evento. Os patrocínios são recebidos pela
+    <strong>Associação Python Brasil (APyB)</strong></span>.
+  </p>
+
+  <h2>Quem organiza</h2>
+  <p>
+    O Django Day São Paulo é organizado pela comunidade, por pessoas com anos de experiência
+    na organização de eventos e grupos Python no Brasil, junto com o apoio institucional da 
+    Associação Python Brasil (APyB).
+  </p>
+  <div class="org">
+    <div>
+      <b>Ana Dulce</b>
+      Ex-presidenta da Associação Python Brasil.
+    </div>
+    <div>
+      <b>Helton</b>
+      Organizador do GruPy-SP.
+    </div>
+    <div>
+      <b>Renne Rocha</b>
+      Presidente do Laboratório Hacker de Campinas.
+    </div>
+  </div>
+
+  <h3 style="margin-top:16px">Comunidades envolvidas</h3>
+  <div class="comunidades">
+    <div>
+      <div class="logo-slot"><img src="/images/apyb.svg" alt="APyB"></div>
+      <b>APyB - Associação Python Brasil</b>
+    </div>
+    <div>
+      <div class="logo-slot"><img src="/images/grupy-sp.png" alt="GruPy-SP"></div>
+      <b>GruPy-SP</b>
+    </div>
+    <div>
+      <div class="logo-slot"><img src="/images/lhc.png" alt="Laboratório Hacker de Campinas"></div>
+      <b>Laboratório Hacker de Campinas</b>
+    </div>
+  </div>
+
+  <h2>Próximos passos</h2>
+  <p>
+    Para patrocinar ou conversar sobre outro formato de apoio, entre em contato pelo e-mail abaixo. As cotas são limitadas e confirmadas por ordem de fechamento.
+  </p>
+  <ul>
+    <li>Prazo para confirmação do patrocínio: 28 de fevereiro de 2027</li>
+    <li>Prazo para envio de logo e materiais: 15 de março de 2027</li>
+  </ul>
+
+  <h2>Contato</h2>
+  <div class="contato">
+    <p>
+      <strong>Organização do Django Day São Paulo</strong><br>
+      <a href="mailto:saopaulo@djangoday.com.br">saopaulo@djangoday.com.br</a><br>
+      <a href="https://sp.djangoday.com.br/">https://sp.djangoday.com.br</a>
+    </p>
+    <ul class="redes">
+      <li><b>Instagram</b> <a href="https://www.instagram.com/djangoday.sp/">@djangoday.sp</a></li>
+      <li><b>LinkedIn</b> <a href="https://www.linkedin.com/company/djangoday-sp">djangoday-sp</a></li>
+      <li><b>Mastodon</b> <a href="https://mastodon.com.br/@djangoday_sp">@djangoday_sp@mastodon.com.br</a></li>
+      <li><b>Bluesky</b> <a href="https://bsky.app/profile/djangoday.com.br">@djangoday.com.br</a></li>
+    </ul>
+  </div>
+
+  <footer class="rodape">
+    <span>Django Day São Paulo · 10/04/2027 · saopaulo@djangoday.com.br</span>
+    <span>Django é uma marca registrada da Django Software Foundation.</span>
+  </footer>
+</section>
+
+</body>
+</html>

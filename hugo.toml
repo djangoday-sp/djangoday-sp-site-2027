@@ -9,3 +9,6 @@ theme = "LucentLink-Hugo"
 
 [outputs]
   home = ["HTML"]
+
+[markup.goldmark.renderer]
+  unsafe = true
