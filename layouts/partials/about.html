@@ -1,0 +1,19 @@
+{{ with .Params.about }}
+<div class="bg-white bg-opacity-10 rounded-lg p-6 mb-6 border border-white border-opacity-20">
+  <center>
+  <h2 class="text-xl font-bold mb-4">{{ .title }}</h2>
+  <div class="space-y-4">
+    {{ range .sections }}
+      <div>
+        <h3 class="font-semibold mb-2"><a href="{{ .url }}">{{ .heading }}</a></h3>
+        <a href="{{ .url }}">
+          <img src="{{ .image }}"
+             alt="{{ .heading }}"
+             class="profile-pic mb-4">
+        </a>
+      </div>
+    {{ end }}
+  </div>
+  </center>
+</div>
+{{ end }}

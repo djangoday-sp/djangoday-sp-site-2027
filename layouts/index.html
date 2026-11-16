@@ -9,11 +9,17 @@
         <!-- Profile Section -->
         {{ partial "profile.html" . }}
 
+        <h2 class="text-xl font-bold mb-2 text-center" style="color: var(--text-color)">Programação Meetup 25/11</h2>
+
+        <p><strong>19h00</strong> - Chegada</p>
+        <p><strong>19h30</strong> - Palestra "Da necessidade à solução: desenvolvimento de um sistema de encomendas para condomínios" com Dáviny Letícia Vidal</p>
+        <p><strong>20h00</strong> - Intervalo</p>
+        <p><strong>20h15</strong> - Palestra "Django além do MTV: quando (não) complicar a arquitetura" com Cássio Botaro</p>
+        <p><strong>20h45</strong> - Encerramento (e uma novidade sobre o Django Day SP 2027!)</p>
+        <br/>
+
         <!-- Links Section -->
         {{ partial "link-card.html" . }}
-
-        <!-- Spotify Embed -->
-        {{ partial "spotify-playlist.html" . }}
 
         <!-- Messaging Etiquette section -->
         <!-- {{ partial "messaging-etiquette.html" . }} -->
@@ -22,7 +28,7 @@
         <!-- style="filter: hue-rotate(150deg) saturate(0.6) brightness(0.9);" -->
 
         <!-- About Me section (If you want to write about yourself, uncomment the section below)--> 
-        <!-- {{ partial "about.html" . }} -->
+        {{ partial "about.html" . }}
 
         <footer class="text-center text-xs opacity-60">
             © 2025 LucentLink | Made with ❤️
