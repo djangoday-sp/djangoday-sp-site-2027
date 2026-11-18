@@ -16,10 +16,14 @@ socials:
 
 # Link cards
 links:
-  - href: "https://pretix.lhc.net.br/djangoday.sp/meetup/"
+  - href: "https://pretix.lhc.net.br/djangoday.sp/meetup/?utm_source=main_page"
     icon: "fas fa-ticket"
     title: "🎟️ Inscrições: Meetup Django SP (25/11)"
     description: "Clique aqui e faça sua inscrição gratuita!"
+  - href: "https://sp.djangoday.com.br/apoie?utm_source=main_page"
+    icon: "fas fa-hand-holding-heart"
+    title: "Plano de Apoio e Patrocínio"
+    description: "Veja como sua empresa pode participar"
   - href: "https://www.instagram.com/djangoday.sp/"
     icon: "fab fa-instagram"
     title: "Siga-nos no Instagram"
