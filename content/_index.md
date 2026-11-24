@@ -1,9 +1,9 @@
 ---
-title: "LucentLink"
+title: "Django Day São Paulo 2027"
 # Profile settings
 profileImage: "images/django-day-sp.png"
 name: "Django Day São Paulo 2027"
-description: "O primeiro evento dedicado ao Django na capital paulista."
+description: "Primeira conferência técnica dedicada ao ecossistema Django em São Paulo."
 socials:
   - url: "https://www.instagram.com/djangoday.sp/"
     icon: "fab fa-instagram"
@@ -16,10 +16,6 @@ socials:
 
 # Link cards
 links:
-  - href: "https://pretix.lhc.net.br/djangoday.sp/meetup/?utm_source=main_page"
-    icon: "fas fa-ticket"
-    title: "🎟️ Inscrições: Meetup Django SP (25/11)"
-    description: "Clique aqui e faça sua inscrição gratuita!"
   - href: "https://sp.djangoday.com.br/apoie?utm_source=main_page"
     icon: "fas fa-hand-holding-heart"
     title: "Plano de Apoio e Patrocínio"
