@@ -5,10 +5,16 @@
     <!-- Background Animation -->
     <div class="bg-animation" id="bgAnimation"></div>
 
-    <div class="container mx-auto px-4 py-12 max-w-md">
+    <div class="container mx-auto px-4 py-12 max-w-2xl">
         <!-- Profile Section -->
         {{ partial "profile.html" . }}
 
+        <div style="display: flex; justify-content: center; margin-top: -45px;">
+          <a style="margin: 20px;" class="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="#sponsors">Apoio e Patrocínio</a>
+          <a style="margin: 20px;" class="bg-white hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" href="#organizer">Organização</a>
+        </div>
+
+        <br/>
         <h2 class="text-xl font-bold mb-2 text-center" style="color: var(--text-color)">Programação Meetup 25/11</h2>
 
         <p><strong>19h00</strong> - Chegada</p>
@@ -27,8 +33,9 @@
         <!-- Embed with hue-shift filter -->
         <!-- style="filter: hue-rotate(150deg) saturate(0.6) brightness(0.9);" -->
 
-        <!-- About Me section (If you want to write about yourself, uncomment the section below)--> 
+        {{ partial "sponsors.html" . }}
         {{ partial "about.html" . }}
+
 
         <footer class="text-center text-xs opacity-60">
             © 2025 LucentLink | Made with ❤️

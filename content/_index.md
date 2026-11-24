@@ -16,7 +16,7 @@ socials:
 
 # Link cards
 links:
-  - href: "https://sp.djangoday.com.br/apoie?utm_source=main_page"
+  - href: "https://sp.djangoday.com.br/apoie?utm_source=djangodaysp2027"
     icon: "fas fa-hand-holding-heart"
     title: "Plano de Apoio e Patrocínio"
     description: "Veja como sua empresa pode participar"
@@ -46,11 +46,19 @@ about:
   sections:
     - heading: Associação Python Brasil
       image: images/apyb.png
-      url: https://apyb.python.org.br/
+      url: https://apyb.python.org.br/?utm_source=djangodaysp2027
     - heading: Grupy-SP
       image: images/grupy-sp.png
-      url: https://www.meetup.com/pt-br/grupy-sp/
+      url: https://www.meetup.com/pt-br/grupy-sp/?utm_source=djangodaysp2027
     - heading: Laboratório Hacker de Campinas
       image: images/lhc.png
-      url: https://lhc.net.br
+      url: https://lhc.net.br?utm_source=djangodaysp2027
+
+sponsors:
+  title: Apoio e Patrocínio
+  ouro:
+    - heading: FIAP
+      image: images/fiap.png
+      url: https://www.fiap.com.br/?utm_source=djangodaysp2027
+
 ---

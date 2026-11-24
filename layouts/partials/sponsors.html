@@ -1,0 +1,58 @@
+{{ with .Params.sponsors }}
+<div class="bg-white bg-opacity-10 rounded-lg p-6 mb-6 border border-white border-opacity-20" id="sponsors">
+
+  <div class="container text-center">
+    <h1 class="text-xl font-bold mb-4">Apoio e Patrocínio</h1>
+
+    {{ if .ouro }}
+    <div style="margin-bottom: 35px;">
+      <center>
+      <h2 class="text-3xl font-bold mb-4">Ouro</h2>
+      <div class="space-y-4">
+        {{ range .ouro }}
+          <div>
+            <a href="{{ .url }}">
+              <img src="{{ .image }}" alt="{{ .heading }}" width="50%">
+            </a>
+          </div>
+        {{ end }}
+      </div>
+      </center>
+    </div>
+    {{ end }}
+
+    {{ if .prata }}
+    <div style="margin-bottom: 35px;">
+      <center>
+      <h2 class="text-2xl font-bold mb-4">Prata</h2>
+      <div class="space-y-4">
+        {{ range .prata }}
+          <div>
+            <a href="{{ .url }}">
+              <img src="{{ .image }}" alt="{{ .heading }}" width="40%">
+            </a>
+          </div>
+        {{ end }}
+      </div>
+      </center>
+    </div>
+    {{ end }}
+
+    {{ if .bronze }}
+    <center>
+    <h2 class="text-xl font-bold mb-4">Bronze</h2>
+    <div class="space-y-4">
+      {{ range .bronze }}
+        <div>
+          <a href="{{ .url }}">
+            <img src="{{ .image }}" alt="{{ .heading }}" width="30%">
+          </a>
+        </div>
+      {{ end }}
+    </div>
+    </center>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}
